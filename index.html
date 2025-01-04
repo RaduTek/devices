@@ -1,0 +1,19 @@
+---
+layout: default
+title: Device Index
+---
+
+<h2>Devices</h2>
+<ul>
+    {% assign grouped_devices = site.devices | group_by: 'manufacturer' %} {%
+    for manufacturer in grouped_devices %}
+    <li>
+        {{ manufacturer.name }}
+        <ul>
+            {% for device in manufacturer.items %}
+            <li><a href="{{ device.url }}">{{ device.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
