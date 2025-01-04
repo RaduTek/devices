@@ -1,4 +1,8 @@
-# Samsung Q1b
+---
+title: Samsung Q1b
+manufacturer: Samsung
+layout: device
+---
 
 ## General Info
 
