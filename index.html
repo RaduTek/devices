@@ -11,7 +11,9 @@ title: Device Index
         {{ manufacturer.name }}
         <ul>
             {% for device in manufacturer.items %}
-            <li><a href="{{ device.url }}">{{ device.title }}</a></li>
+            <li>
+                <a href="{{ device.url | relative_url }}">{{ device.title }}</a>
+            </li>
             {% endfor %}
         </ul>
     </li>
