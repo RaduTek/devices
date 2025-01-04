@@ -1,7 +1,7 @@
 ---
-title: ThinkPad X240
+title: ThinkPad X200 Tablet
 manufacturer: Lenovo
-type: Laptop
+type: Tablet
 layout: device
 ---
 

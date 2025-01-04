@@ -1,6 +1,7 @@
 ---
 title: Surface Laptop 3
 manufacturer: Microsoft
+type: Laptop
 layout: device
 ---
 

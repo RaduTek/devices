@@ -1,6 +1,7 @@
 ---
 title: Surface Go
 manufacturer: Microsoft
+type: Tablet
 layout: device
 ---
 

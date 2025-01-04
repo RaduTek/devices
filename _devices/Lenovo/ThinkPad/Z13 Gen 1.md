@@ -1,6 +1,7 @@
 ---
 title: ThinkPad Z13 Gen 1
 manufacturer: Lenovo
+type: Laptop
 layout: device
 ---
 

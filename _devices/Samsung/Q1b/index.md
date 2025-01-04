@@ -1,6 +1,7 @@
 ---
 title: Samsung Q1b
 manufacturer: Samsung
+type: Tablet
 layout: device
 ---
 
