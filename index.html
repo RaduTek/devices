@@ -37,12 +37,12 @@ title: Devices
     <div class="device-grid-cell">
         {% if device.thumbnail or device.image %}
         <div class="device-grid-image">
-            <a href="{{ device.url }}">
-                <img src="{{ device.url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
+            <a href="{{ device.url | relative_url }}">
+                <img src="{{ device.url | relative_url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
             </a>
         </div>
         {% endif %}
-        <h4><a href="{{ device.url }}">{{ device.title }}</a></h4>
+        <h4><a href="{{ device.url | relative_url }}">{{ device.title }}</a></h4>
         {% if device.type %}
         <p class="device-grid-meta">{{ device.type }}</p>
         {% endif %}
@@ -66,12 +66,12 @@ title: Devices
     <div class="device-grid-cell">
         {% if device.thumbnail or device.image %}
         <div class="device-grid-image">
-            <a href="{{ device.url }}">
-                <img src="{{ device.url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
+            <a href="{{ device.url | relative_url }}">
+                <img src="{{ device.url | relative_url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
             </a>
         </div>
         {% endif %}
-        <h4><a href="{{ device.url }}">{{ device.title }}</a></h4>
+        <h4><a href="{{ device.url | relative_url }}">{{ device.title }}</a></h4>
         {% if device.type %}
         <p class="device-grid-meta">{{ device.type }}</p>
         {% endif %}
