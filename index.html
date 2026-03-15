@@ -23,6 +23,34 @@ title: Devices
 {% assign unbranded_empty = manufacturer.items | where_exp: "device", "device.brand == ''" %}
 {% assign unbranded = unbranded_nil | concat: unbranded_empty %}
 
+{% if unbranded.size > 0 %}
+{% assign unbranded_with_model = unbranded | where_exp: "device", "device.model != nil" | where_exp: "device",
+"device.model != ''" | sort_natural: "model" %}
+{% assign unbranded_without_model_nil = unbranded | where_exp: "device", "device.model == nil" | sort_natural: "title"
+%}
+{% assign unbranded_without_model_empty = unbranded | where_exp: "device", "device.model == ''" | sort_natural: "title"
+%}
+{% assign unbranded_without_model = unbranded_without_model_nil | concat: unbranded_without_model_empty %}
+{% assign unbranded_sorted = unbranded_with_model | concat: unbranded_without_model %}
+<div class="device-grid">
+    {% for device in unbranded_sorted %}
+    <div class="device-grid-cell">
+        {% if device.thumbnail or device.image %}
+        <div class="device-grid-image">
+            <a href="{{ device.url | relative_url }}">
+                <img src="{{ device.url | relative_url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
+            </a>
+        </div>
+        {% endif %}
+        <h4><a href="{{ device.url | relative_url }}">{{ device.title }}</a></h4>
+        {% if device.type %}
+        <p class="device-grid-meta">{{ device.type }}</p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
 {% if branded.size > 0 %}
 {% assign brands = branded | group_by: "brand" | sort_natural: "name" %}
 {% for brand in brands %}
@@ -52,34 +80,6 @@ title: Devices
     {% endfor %}
 </div>
 {% endfor %}
-{% endif %}
-
-{% if unbranded.size > 0 %}
-{% assign unbranded_with_model = unbranded | where_exp: "device", "device.model != nil" | where_exp: "device",
-"device.model != ''" | sort_natural: "model" %}
-{% assign unbranded_without_model_nil = unbranded | where_exp: "device", "device.model == nil" | sort_natural: "title"
-%}
-{% assign unbranded_without_model_empty = unbranded | where_exp: "device", "device.model == ''" | sort_natural: "title"
-%}
-{% assign unbranded_without_model = unbranded_without_model_nil | concat: unbranded_without_model_empty %}
-{% assign unbranded_sorted = unbranded_with_model | concat: unbranded_without_model %}
-<div class="device-grid">
-    {% for device in unbranded_sorted %}
-    <div class="device-grid-cell">
-        {% if device.thumbnail or device.image %}
-        <div class="device-grid-image">
-            <a href="{{ device.url | relative_url }}">
-                <img src="{{ device.url | relative_url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
-            </a>
-        </div>
-        {% endif %}
-        <h4><a href="{{ device.url | relative_url }}">{{ device.title }}</a></h4>
-        {% if device.type %}
-        <p class="device-grid-meta">{{ device.type }}</p>
-        {% endif %}
-    </div>
-    {% endfor %}
-</div>
 {% endif %}
 
 {% endfor %}

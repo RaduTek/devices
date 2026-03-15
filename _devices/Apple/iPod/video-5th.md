@@ -1,6 +1,6 @@
 ---
 layout: device
-title: iPod Video (5th Gen)
+title: iPod with video (5th Gen)
 image: images/video-5th.jpg
 manufacturer: Apple
 brand: iPod
