@@ -1,7 +1,7 @@
 ---
 layout: device
 title: iPod classic (6th Gen)
-image: images/classic6.jpg
+image: images/classic-6th.jpg
 manufacturer: Apple
 brand: iPod
 type: Media Player
