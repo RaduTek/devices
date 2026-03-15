@@ -1,0 +1,34 @@
+- key: manufacturer
+  label: Manufacturer
+- key: type
+  label: Type
+- key: model
+  label: Model
+- key: spec-cpu
+  label: CPU
+- key: spec-gpu
+  label: GPU
+- key: spec-chipset
+  label: Chipset
+- key: spec-display
+  label: Display
+- key: spec-ram
+  label: RAM
+- key: spec-storage
+  label: Storage
+- key: spec-os
+  label: Operating System
+- key: spec-wlan
+  label: Wireless LAN
+- key: spec-wwan
+  label: Wireless WAN
+- key: spec-bt
+  label: Bluetooth
+- key: spec-sensor
+  label: Sensor
+- key: spec-battery
+  label: Battery
+- key: spec-ports
+  label: Ports
+- key: spec-dimensions
+  label: Dimensions

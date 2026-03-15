@@ -2,5 +2,47 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
+<h2>{{ page.title }}</h2>
+
+{% assign image_url = nil %}
+{% if page.image %}
+{% assign first_image_char = page.image | slice: 0, 1 %}
+{% if page.image contains '://' %}
+{% assign image_url = page.image %}
+{% elsif first_image_char == '/' %}
+{% assign image_url = page.image | relative_url %}
+{% else %}
+{% assign path_parts = page.path | split: '/' %}
+{% assign image_base = '' %}
+{% for part in path_parts offset: 1 %}
+{% unless forloop.last %}
+{% assign image_base = image_base | append: '/' | append: part %}
+{% endunless %}
+{% endfor %}
+{% assign image_url = image_base | append: '/' | append: page.image | relative_url %}
+{% endif %}
+{% endif %}
+
+<div class="device-overview">
+    <table class="device-specs border">
+        <tbody>
+            {% for row in site.data.device_spec_rows %}
+            {% assign value = page[row.key] %}
+            {% if value %}
+            <tr>
+                <th class="row-head">{{ row.label }}</th>
+                <td>{{ value }}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% if page.image %}
+    <figure class="device-photo">
+        <img src="../{{ page.image }}" alt="{{ page.title }}">
+    </figure>
+    {% endif %}
+</div>
+
 <div>{{ content }}</div>

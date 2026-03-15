@@ -1,21 +1,30 @@
 ---
 layout: default
-title: Device Index
+title: Devices
 ---
 
 <h2>Devices</h2>
-<ul>
-    {% assign grouped_devices = site.devices | group_by: 'manufacturer' %} {%
-    for manufacturer in grouped_devices %}
-    <li>
-        {{ manufacturer.name }}
-        <ul>
-            {% for device in manufacturer.items %}
-            <li>
-                <a href="{{ device.url | relative_url }}">{{ device.title }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </li>
+
+{% assign devices_by_manufacturer = site.devices | sort_natural: "manufacturer" | group_by: "manufacturer" %}
+{% for manufacturer in devices_by_manufacturer %}
+{% assign devices_with_model = manufacturer.items | where_exp: "device", "device.model and device.model != ''" |
+sort_natural: "model" %}
+{% assign devices_without_model = manufacturer.items | where_exp: "device", "device.model == nil or device.model == ''"
+| sort_natural: "title" %}
+{% assign devices_sorted = devices_with_model | concat: devices_without_model %}
+
+<h3>{{ manufacturer.name }}</h3>
+<div class="device-grid">
+    {% for device in devices_sorted %}
+    <div class="device-grid-cell">
+        <h4><a href="{{ device.url | relative_url }}">{{ device.title }}</a></h4>
+        {% if device.model %}
+        <p class="device-grid-meta"><strong>Model:</strong> {{ device.model }}</p>
+        {% endif %}
+        {% if device.type %}
+        <p class="device-grid-meta"><strong>Type:</strong> {{ device.type }}</p>
+        {% endif %}
+    </div>
     {% endfor %}
-</ul>
+</div>
+{% endfor %}

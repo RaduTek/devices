@@ -11,3 +11,75 @@ h2 {
     margin: 0 auto;
     max-width: 1000px;
 }
+
+.full-width {
+    width: 100%;
+}
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+}
+
+table.border,
+table.border tr,
+table.border td {
+    border: 1px solid #ccc;
+}
+
+table td,
+table th {
+    padding: 1px 4px;
+}
+
+table tr th {
+    background-color: #eee;
+}
+table tr th.row-head {
+    text-align: left;
+}
+
+.device-grid {
+    overflow: hidden;
+    margin: 0 0 16px 0;
+}
+
+.device-grid-cell {
+    float: left;
+    width: 210px;
+    border: 1px solid #ccc;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    background-color: #fff;
+}
+
+.device-grid-cell h4 {
+    margin: 0 0 6px 0;
+}
+
+.device-grid-meta {
+    margin: 0 0 4px 0;
+}
+
+.device-overview {
+    overflow: hidden;
+}
+
+.device-overview .device-specs {
+    float: left;
+    margin-bottom: 4px;
+}
+
+.device-photo {
+    float: right;
+    margin: 0;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 2px;
+}
+
+.device-photo img {
+    display: block;
+    width: 300px;
+}
