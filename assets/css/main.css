@@ -67,6 +67,15 @@ table tr th.row-head {
     background-color: #fff;
 }
 
+.device-grid-cell a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.device-grid-cell a:hover {
+    text-decoration: underline;
+}
+
 .device-grid-cell h4 {
     margin: 0 0 6px 0;
 }
@@ -102,7 +111,6 @@ table tr th.row-head {
 
 .device-photo img {
     display: block;
-    width: 300px;
     margin: 0 auto;
 }
 
