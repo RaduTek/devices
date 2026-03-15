@@ -1,6 +1,6 @@
 ---
 title: Stylistic Q572
-manufacturer: Acer
+manufacturer: Fujitsu
 type: Tablet
 layout: device
 spec-cpu: AMD Z-60 (2 core, 1 GHz)
