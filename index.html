@@ -3,7 +3,11 @@ layout: default
 title: Devices
 ---
 
-<h2>Devices</h2>
+<p>Welcome to my device collection! This website shows off all the devices I own (as long as I keep it updated :)</p>
+
+{% assign total_device_count = site.devices | size %}
+<h2>Devices ({{ total_device_count }})</h2>
+
 
 {% assign devices_by_manufacturer = site.devices | sort_natural: "manufacturer" | group_by: "manufacturer" %}
 {% for manufacturer in devices_by_manufacturer %}
@@ -12,8 +16,9 @@ sort_natural: "model" %}
 {% assign devices_without_model = manufacturer.items | where_exp: "device", "device.model == nil or device.model == ''"
 | sort_natural: "title" %}
 {% assign devices_sorted = devices_with_model | concat: devices_without_model %}
+{% assign manufacturer_device_count = manufacturer.items | size %}
 
-<h3>{{ manufacturer.name }}</h3>
+<h3>{{ manufacturer.name }} ({{ manufacturer_device_count }})</h3>
 <div class="device-grid">
     {% for device in devices_sorted %}
     <div class="device-grid-cell">

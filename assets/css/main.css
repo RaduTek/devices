@@ -7,6 +7,14 @@ h2 {
     border-bottom: 1px solid #ccc;
 }
 
+.title-link {
+    color: inherit;
+    text-decoration: none;
+}
+.title-link:hover {
+    text-decoration: underline;
+}
+
 .content {
     margin: 0 auto;
     max-width: 1000px;

@@ -12,12 +12,12 @@
   label: Chipset
 - key: spec-display
   label: Display
+- key: spec-touch
+  label: Touchscreen
 - key: spec-ram
   label: RAM
 - key: spec-storage
   label: Storage
-- key: spec-os
-  label: Operating System
 - key: spec-wlan
   label: Wireless LAN
 - key: spec-wwan
@@ -26,9 +26,21 @@
   label: Bluetooth
 - key: spec-sensor
   label: Sensor
+- key: spec-camera
+  label: Camera
+- key: spec-audio
+  label: Audio
+- key: spec-keyboard
+  label: Keyboard
+- key: spec-pointing
+  label: Pointing Device
 - key: spec-battery
   label: Battery
 - key: spec-ports
   label: Ports
 - key: spec-dimensions
   label: Dimensions
+- key: spec-weight
+  label: Weight
+- key: spec-os
+  label: Operating System
