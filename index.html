@@ -11,25 +11,73 @@ title: Devices
 
 {% assign devices_by_manufacturer = site.devices | sort_natural: "manufacturer" | group_by: "manufacturer" %}
 {% for manufacturer in devices_by_manufacturer %}
-{% assign devices_with_model = manufacturer.items | where_exp: "device", "device.model and device.model != ''" |
-sort_natural: "model" %}
-{% assign devices_without_model = manufacturer.items | where_exp: "device", "device.model == nil or device.model == ''"
-| sort_natural: "title" %}
-{% assign devices_sorted = devices_with_model | concat: devices_without_model %}
 {% assign manufacturer_device_count = manufacturer.items | size %}
 
 <h3>{{ manufacturer.name }} ({{ manufacturer_device_count }})</h3>
+
+{% assign branded = manufacturer.items | where_exp: "device", "device.brand != nil" | where_exp: "device", "device.brand
+!= ''" %}
+{% assign unbranded_nil = manufacturer.items | where_exp: "device", "device.brand == nil" %}
+{% assign unbranded_empty = manufacturer.items | where_exp: "device", "device.brand == ''" %}
+{% assign unbranded = unbranded_nil | concat: unbranded_empty %}
+
+{% if branded.size > 0 %}
+{% assign brands = branded | group_by: "brand" | sort_natural: "name" %}
+{% for brand in brands %}
+{% assign brand_count = brand.items | size %}
+{% assign brand_with_model = brand.items | where_exp: "device", "device.model != nil" | where_exp: "device",
+"device.model != ''" | sort_natural: "model" %}
+{% assign brand_without_model_nil = brand.items | where_exp: "device", "device.model == nil" | sort_natural: "title" %}
+{% assign brand_without_model_empty = brand.items | where_exp: "device", "device.model == ''" | sort_natural: "title" %}
+{% assign brand_without_model = brand_without_model_nil | concat: brand_without_model_empty %}
+{% assign brand_sorted = brand_with_model | concat: brand_without_model %}
+<h4>{{ brand.name }} ({{ brand_count }})</h4>
 <div class="device-grid">
-    {% for device in devices_sorted %}
+    {% for device in brand_sorted %}
     <div class="device-grid-cell">
-        <h4><a href="{{ device.url | relative_url }}">{{ device.title }}</a></h4>
-        {% if device.model %}
-        <p class="device-grid-meta"><strong>Model:</strong> {{ device.model }}</p>
+        {% if device.thumbnail or device.image %}
+        <div class="device-grid-image">
+            <a href="{{ device.url }}">
+                <img src="{{ device.url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
+            </a>
+        </div>
         {% endif %}
+        <h4><a href="{{ device.url }}">{{ device.title }}</a></h4>
         {% if device.type %}
-        <p class="device-grid-meta"><strong>Type:</strong> {{ device.type }}</p>
+        <p class="device-grid-meta">{{ device.type }}</p>
         {% endif %}
     </div>
     {% endfor %}
 </div>
+{% endfor %}
+{% endif %}
+
+{% if unbranded.size > 0 %}
+{% assign unbranded_with_model = unbranded | where_exp: "device", "device.model != nil" | where_exp: "device",
+"device.model != ''" | sort_natural: "model" %}
+{% assign unbranded_without_model_nil = unbranded | where_exp: "device", "device.model == nil" | sort_natural: "title"
+%}
+{% assign unbranded_without_model_empty = unbranded | where_exp: "device", "device.model == ''" | sort_natural: "title"
+%}
+{% assign unbranded_without_model = unbranded_without_model_nil | concat: unbranded_without_model_empty %}
+{% assign unbranded_sorted = unbranded_with_model | concat: unbranded_without_model %}
+<div class="device-grid">
+    {% for device in unbranded_sorted %}
+    <div class="device-grid-cell">
+        {% if device.thumbnail or device.image %}
+        <div class="device-grid-image">
+            <a href="{{ device.url }}">
+                <img src="{{ device.url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
+            </a>
+        </div>
+        {% endif %}
+        <h4><a href="{{ device.url }}">{{ device.title }}</a></h4>
+        {% if device.type %}
+        <p class="device-grid-meta">{{ device.type }}</p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
 {% endfor %}

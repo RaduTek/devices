@@ -2,28 +2,26 @@
 layout: default
 ---
 
-<h2>{{ page.title }}</h2>
+<h2><a href="{{ page.url | absolute_url }}" class="title-link" title="Permalink">{{ page.title }}</a></h2>
 
-<div class="device-overview">
-    <table class="device-specs border">
-        <tbody>
-            {% for row in site.data.device_spec_rows %}
-            {% assign value = page[row.key] %}
-            {% if value %}
-            <tr>
-                <th class="row-head">{{ row.label }}</th>
-                <td>{{ value }}</td>
-            </tr>
-            {% endif %}
-            {% endfor %}
-        </tbody>
-    </table>
+{% if page.image %}
+<figure class="device-photo">
+    <img src="../{{ page.image }}" alt="{{ page.title }}">
+</figure>
+{% endif %}
 
-    {% if page.image %}
-    <figure class="device-photo">
-        <img src="{{ page.image }}" alt="{{ page.title }}">
-    </figure>
-    {% endif %}
-</div>
+<table class="device-specs border">
+    <tbody>
+        {% for row in site.data.device_spec_rows %}
+        {% assign value = page[row.key] %}
+        {% if value %}
+        <tr>
+            <th class="row-head">{{ row.label }}</th>
+            <td>{{ value }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
 
 <div>{{ content }}</div>
