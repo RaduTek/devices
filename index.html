@@ -5,6 +5,8 @@ title: Devices
 
 <p>Welcome to my device collection! This website shows off all the devices I own (as long as I keep it updated :)</p>
 
+<p>Click on any device to view more information about it.</p>
+
 {% assign total_device_count = site.devices | size %}
 <h2>Devices ({{ total_device_count }})</h2>
 
@@ -37,12 +39,12 @@ title: Devices
     <div class="device-grid-cell">
         {% if device.thumbnail or device.image %}
         <div class="device-grid-image">
-            <a href="{{ device.url }}">
-                <img src="{{ device.url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
+            <a href="{{ device.url | relative_url }}">
+                <img src="{{ device.url | relative_url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
             </a>
         </div>
         {% endif %}
-        <h4><a href="{{ device.url }}">{{ device.title }}</a></h4>
+        <h4><a href="{{ device.url | relative_url }}">{{ device.title }}</a></h4>
         {% if device.type %}
         <p class="device-grid-meta">{{ device.type }}</p>
         {% endif %}
@@ -66,12 +68,12 @@ title: Devices
     <div class="device-grid-cell">
         {% if device.thumbnail or device.image %}
         <div class="device-grid-image">
-            <a href="{{ device.url }}">
-                <img src="{{ device.url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
+            <a href="{{ device.url | relative_url }}">
+                <img src="{{ device.url | relative_url }}../{{ device.thumbnail | default: device.image }}" alt="Image">
             </a>
         </div>
         {% endif %}
-        <h4><a href="{{ device.url }}">{{ device.title }}</a></h4>
+        <h4><a href="{{ device.url | relative_url }}">{{ device.title }}</a></h4>
         {% if device.type %}
         <p class="device-grid-meta">{{ device.type }}</p>
         {% endif %}
