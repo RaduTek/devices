@@ -4,25 +4,6 @@ layout: default
 
 <h2>{{ page.title }}</h2>
 
-{% assign image_url = nil %}
-{% if page.image %}
-{% assign first_image_char = page.image | slice: 0, 1 %}
-{% if page.image contains '://' %}
-{% assign image_url = page.image %}
-{% elsif first_image_char == '/' %}
-{% assign image_url = page.image | relative_url %}
-{% else %}
-{% assign path_parts = page.path | split: '/' %}
-{% assign image_base = '' %}
-{% for part in path_parts offset: 1 %}
-{% unless forloop.last %}
-{% assign image_base = image_base | append: '/' | append: part %}
-{% endunless %}
-{% endfor %}
-{% assign image_url = image_base | append: '/' | append: page.image | relative_url %}
-{% endif %}
-{% endif %}
-
 <div class="device-overview">
     <table class="device-specs border">
         <tbody>
@@ -40,7 +21,7 @@ layout: default
 
     {% if page.image %}
     <figure class="device-photo">
-        <img src="../{{ page.image }}" alt="{{ page.title }}">
+        <img src="{{ page.image }}" alt="{{ page.title }}">
     </figure>
     {% endif %}
 </div>
