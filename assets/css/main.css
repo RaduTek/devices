@@ -7,6 +7,11 @@ h2 {
     border-bottom: 1px solid #ccc;
 }
 
+img {
+    border: none;
+    outline: none;
+}
+
 .title-link {
     color: inherit;
     text-decoration: none;
@@ -70,18 +75,26 @@ table tr th.row-head {
     margin: 0 0 4px 0;
 }
 
-.device-overview {
-    overflow: hidden;
+.device-grid-image a {
+    display: block;
+    text-align: center;
 }
 
-.device-overview .device-specs {
-    float: left;
+.device-grid-image img {
+    margin: 0 auto;
+    height: 120px;
+    width: auto;
+}
+
+.device-specs {
     margin-bottom: 4px;
+    min-width: 400px;
 }
 
 .device-photo {
     float: right;
     margin: 0;
+    margin-bottom: 4px;
     border: 1px solid #ccc;
     background-color: white;
     padding: 2px;
@@ -90,4 +103,27 @@ table tr th.row-head {
 .device-photo img {
     display: block;
     width: 300px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .device-photo {
+        float: none;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .device-specs {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .device-grid-cell {
+        width: 100%;
+        float: none;
+        display: block;
+        box-sizing: border-box;
+    }
 }

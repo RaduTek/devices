@@ -4,6 +4,8 @@
   label: Type
 - key: model
   label: Model
+- key: spec-release
+  label: Release Date
 - key: spec-cpu
   label: CPU
 - key: spec-gpu
@@ -36,6 +38,10 @@
   label: Pointing Device
 - key: spec-battery
   label: Battery
+- key: spec-power
+  label: Power
+- key: spec-color
+  label: Color
 - key: spec-ports
   label: Ports
 - key: spec-dimensions
@@ -44,3 +50,5 @@
   label: Weight
 - key: spec-os
   label: Operating System
+- key: spec-firmware
+  label: Firmware
