@@ -17,11 +17,13 @@ layout: default
         {% if value %}
         <tr>
             <th class="row-head">{{ row.label }}</th>
-            <td>{{ value }}</td>
+            <td>
+                {{ value | markdownify }}
+            </td>
         </tr>
         {% endif %}
         {% endfor %}
     </tbody>
 </table>
 
-<div>{{ content }}</div>
+<div class="device-content">{{ content }}</div>

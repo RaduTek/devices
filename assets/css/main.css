@@ -3,7 +3,9 @@ body {
 }
 
 h1,
-h2 {
+h2,
+hr {
+    border: none;
     border-bottom: 1px solid #ccc;
 }
 
@@ -51,6 +53,10 @@ table tr th {
 }
 table tr th.row-head {
     text-align: left;
+}
+
+table td p {
+    margin: 0;
 }
 
 .device-grid {
@@ -104,6 +110,7 @@ table tr th.row-head {
     float: right;
     margin: 0;
     margin-bottom: 4px;
+    margin-right: 4px;
     border: 1px solid #ccc;
     background-color: white;
     padding: 2px;

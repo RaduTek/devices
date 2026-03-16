@@ -4,7 +4,7 @@
   label: Type
 - key: model
   label: Model
-- key: spec-release
+- key: release-date-pretty
   label: Release Date
 - key: spec-cpu
   label: CPU
@@ -12,12 +12,12 @@
   label: GPU
 - key: spec-chipset
   label: Chipset
+- key: spec-ram
+  label: RAM
 - key: spec-display
   label: Display
 - key: spec-touch
   label: Touchscreen
-- key: spec-ram
-  label: RAM
 - key: spec-storage
   label: Storage
 - key: spec-odd
