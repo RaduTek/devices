@@ -20,6 +20,10 @@
   label: RAM
 - key: spec-storage
   label: Storage
+- key: spec-odd
+  label: Optical Drive
+- key: spec-lan
+  label: LAN
 - key: spec-wlan
   label: Wireless LAN
 - key: spec-wwan
