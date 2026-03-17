@@ -54,3 +54,8 @@ I got the Q1b and a broken Q1 together in the same lot.
     - Missing HDD + ZIF cable
     - RAM stick (Samsung 1 GB DDR2 SODIMM) was not inserted correctly
 - Power circuit OK (charges battery)
+
+## Links
+
+- [Drivers (Windows XP)](https://archive.org/details/samsung-q1b-drivers)
+- [Recovery Media (Windows XP Tablet PC Edition 2005 - English)](https://archive.org/details/q1brecovery)
