@@ -3,6 +3,7 @@ layout: device
 title: Zen Touch
 image: images/Zen-Touch.jpg
 type: Media Player
+tags: media-player
 manufacturer: Creative
 model: Zen Touch
 release-date: 2004-06-07

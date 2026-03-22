@@ -5,6 +5,7 @@ image: images/classic-6.5th.jpg
 manufacturer: Apple
 brand: iPod
 type: Media Player
+tags: media-player
 model: MB565
 spec-display: 2.5" 320x240 LED LCD
 spec-storage: 128 GB M.2 SATA SSD

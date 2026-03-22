@@ -73,7 +73,8 @@ td {
 
 table.border,
 table.border tr,
-table.border td {
+table.border td,
+table.border th {
     border: 1px solid #ccc;
 }
 
@@ -91,6 +92,31 @@ table tr th.row-head {
 
 table td p {
     margin: 0;
+}
+
+.tags {
+    list-style: none;
+    padding: 0;
+    margin: -4px 0 8px 0;
+    display: block;
+    overflow: hidden;
+}
+
+.tags li {
+    float: left;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 1px 4px;
+    margin: 0 6px 0 0;
+    font-size: 11px;
+}
+
+.tags li a {
+    color: inherit;
+    text-decoration: none;
+}
+.tags li a:hover {
+    text-decoration: underline;
 }
 
 .device-grid {

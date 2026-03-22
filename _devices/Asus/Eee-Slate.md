@@ -4,4 +4,5 @@ title: Eee Slate
 manufacturer: Asus
 image: images/Eee-Slate.jpg
 type: Tablet
+tags: computer tablet
 ---

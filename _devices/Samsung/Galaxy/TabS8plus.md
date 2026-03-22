@@ -5,6 +5,7 @@ image: images/TabS8plus.jpg
 manufacturer: Samsung
 brand: Galaxy
 type: Tablet
+tags: mobile-device tablet android
 spec-os: Android
 ---
 

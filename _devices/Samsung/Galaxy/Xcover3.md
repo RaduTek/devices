@@ -5,5 +5,6 @@ image: images/Xcover3.jpg
 manufacturer: Samsung
 brand: Galaxy
 type: Smartphone
+tags: mobile-device smartphone android
 spec-os: Android
 ---

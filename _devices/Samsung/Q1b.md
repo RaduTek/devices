@@ -3,6 +3,7 @@ layout: device
 title: Samsung Q1b
 manufacturer: Samsung
 type: Tablet
+tags: computer tablet umpc
 image: Q1.jpg
 spec-cpu: VIA C7-M (1 GHz)
 spec-chipset: VIA VX700
