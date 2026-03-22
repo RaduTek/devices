@@ -1,5 +1,6 @@
 - key: computer
   label: Computer
+  comment: Device running a desktop OS on x86 architecture
 - key: laptop
   label: Laptop
 - key: desktop
@@ -8,6 +9,9 @@
   label: Tablet
 - key: smartphone
   label: Smartphone
+- key: feature-phone
+  label: Feature Phone
+  comment: Basic mobile phone with limited functionality compared to a smartphone
 - key: smartwatch
   label: Smartwatch
 - key: server
@@ -22,8 +26,10 @@
   label: Ultrabook
 - key: convertible
   label: Convertible
+  comment: Device that can switch between laptop and tablet modes
 - key: 2-in-1
   label: 2-in-1
+  comment: Device that combines a laptop and tablet
 - key: netbook
   label: Netbook
 - key: mini-pc
@@ -32,7 +38,24 @@
   label: Thin Client
 - key: umpc
   label: UMPC
+  comment: Ultra-Mobile PC, a small, lightweight, and portable computer
 - key: mobile-device
   label: Mobile Device
+  comment: Small device running a mobile OS, typically on ARM architecture
 - key: media-player
   label: Media Player
+  comment: Portable device made for playing music, videos, and other media
+- key: e-reader
+  label: E-Reader
+  comment: Device for reading electronic books
+- key: game-console
+  label: Game Console
+  comment: Device designed for playing video games
+- key: pocket-pc
+  label: Pocket PC
+  comment: Device running Windows Mobile or Windows CE
+- key: pda
+  label: PDA
+  comment: Personal Digital Assistant
+- key: set-top-box
+  label: Set-top Box

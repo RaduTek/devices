@@ -5,6 +5,7 @@ image: images/classic-6th.jpg
 manufacturer: Apple
 brand: iPod
 type: Media Player
+tags: media-player
 model: MB147
 spec-display: 2.5" 320x240 LED LCD
 spec-storage: 80 GB 1.8" PATA HDD

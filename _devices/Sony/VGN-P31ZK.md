@@ -5,7 +5,7 @@ title: VAIO VGN-P31ZK
 image: images/VGN-P31ZK.jpg
 manufacturer: Sony
 type: Laptop
-tags: Laptop UMPC
+tags: computer laptop umpc
 model: VGN-P31ZK
 spec-cpu: Intel Atom Z540
 spec-gpu: Intel GMA 500

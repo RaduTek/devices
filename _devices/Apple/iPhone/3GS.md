@@ -5,4 +5,5 @@ image: images/3GS.jpg
 manufacturer: Apple
 brand: iPhone
 type: Smartphone
+tags: smartphone
 ---

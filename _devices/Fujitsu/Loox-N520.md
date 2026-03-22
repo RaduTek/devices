@@ -3,6 +3,7 @@ layout: device
 title: Pocket Loox N520
 image: images/Loox-N5xx.jpg
 type: PDA
+tags: mobile-device pocket-pc pda
 manufacturer: Fujitsu
 spec-os: Windows Mobile 5.0
 spec-screen: 3.5" 240x320 LCD, LED backlight

@@ -4,6 +4,7 @@ title: Moto E5 Plus
 image: images/E5-plus.jpg
 manufacturer: Motorola
 type: Smartphone
+tags: mobile-device smartphone android
 spec-os: Android 8.0 Oreo
 ---
 
