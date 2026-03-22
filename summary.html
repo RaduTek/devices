@@ -10,9 +10,11 @@ title: Summary
         <tr>
             <th>Tag</th>
             <th>Count</th>
+            <th>Comment</th>
         </tr>
     </thead>
     <tbody>
+        {% assign tag_items = "" %}
         {% for tag_item in site.data.device_tags %}
         {% assign tag_key = tag_item.key %}
         {% assign count = 0 %}
@@ -22,9 +24,19 @@ title: Summary
         {% endif %}
         {% endfor %}
         {% if count > 0 %}
+        {% capture padded %}{{ count | prepend: "00000" | slice: -5, 5 }}{% endcapture %}
+        {% assign tag_items = tag_items | append: padded | append: "|" | append: count | append: "|" | append:
+        tag_item.label | append: "|" | append: tag_item.comment | append: ";" %}
+        {% endif %}
+        {% endfor %}
+        {% assign sorted = tag_items | split: ";" | sort | reverse %}
+        {% for item in sorted %}
+        {% if item != "" %}
+        {% assign parts = item | split: "|" %}
         <tr>
-            <td>{{ tag_item.label }}</td>
-            <td>{{ count }}</td>
+            <td>{{ parts[2] }}</td>
+            <td>{{ parts[1] }}</td>
+            <td>{{ parts[3] }}</td>
         </tr>
         {% endif %}
         {% endfor %}
