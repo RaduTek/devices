@@ -1,0 +1,38 @@
+- key: computer
+  label: Computer
+- key: laptop
+  label: Laptop
+- key: desktop
+  label: Desktop
+- key: tablet
+  label: Tablet
+- key: smartphone
+  label: Smartphone
+- key: smartwatch
+  label: Smartwatch
+- key: server
+  label: Server
+- key: workstation
+  label: Workstation
+- key: all-in-one
+  label: All-in-One
+- key: gaming
+  label: Gaming
+- key: ultrabook
+  label: Ultrabook
+- key: convertible
+  label: Convertible
+- key: 2-in-1
+  label: 2-in-1
+- key: netbook
+  label: Netbook
+- key: mini-pc
+  label: Mini PC
+- key: thin-client
+  label: Thin Client
+- key: umpc
+  label: UMPC
+- key: mobile-device
+  label: Mobile Device
+- key: media-player
+  label: Media Player

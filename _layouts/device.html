@@ -10,6 +10,15 @@ layout: default
 </figure>
 {% endif %}
 
+{% if page.tags %}
+<ul class="tags">
+    {% for tag in page.tags %}
+    {% assign tag_ex = site.data.device_tags | where: "key", tag | first %}
+    <li>{{ tag_ex.label }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 <table class="device-specs border">
     <tbody>
         {% for row in site.data.device_spec_rows %}

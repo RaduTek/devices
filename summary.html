@@ -1,0 +1,32 @@
+---
+layout: default
+title: Summary
+---
+
+<h2>Device Summary</h2>
+
+<table class="border">
+    <thead>
+        <tr>
+            <th>Tag</th>
+            <th>Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tag_item in site.data.device_tags %}
+        {% assign tag_key = tag_item.key %}
+        {% assign count = 0 %}
+        {% for device in site.devices %}
+        {% if device.tags contains tag_key %}
+        {% assign count = count | plus: 1 %}
+        {% endif %}
+        {% endfor %}
+        {% if count > 0 %}
+        <tr>
+            <td>{{ tag_item.label }}</td>
+            <td>{{ count }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
