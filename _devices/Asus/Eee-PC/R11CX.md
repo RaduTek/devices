@@ -18,4 +18,10 @@ spec-display: 10" 1024x600 TN LED
 spec-wifi: 802.11n
 ---
 
-This was my first laptop. Got it in late 2015 for a really cheap price for what was only a 3 year old computer.
+## Notes
+
+I got this laptop for it's functional battery. Functionally it is identical to the Asus X101CH, in fact it is a X101CH. I don't know exactly why Asus renamed this laptop to R11CX.
+
+The unit does seem to have a cheaper display with worse viewing angles and color rendition than the one in the X101CH.
+
+For some reason, this unit is very picky about hard drives. I had to try many HDDs and SSDs to find ones that work. My X101CH is not picky whatsoever about the drives. Both have the same revision of motherboard, with the only difference being the soldered RAM capacity. I even tried a BIOS update to the latest, since the R11CX was on an older BIOS version, but that changed nothing.
