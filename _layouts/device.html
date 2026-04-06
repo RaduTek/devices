@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<h2><a href="{{ page.url | absolute_url }}" class="title-link" title="Permalink">{{ page.title }}</a></h2>
+<h1><a href="{{ page.url | absolute_url }}" class="title-link" title="Permalink">{{ page.title }}</a></h1>
 
 {% if page.image %}
-<figure class="device-photo">
-    <img src="../{{ page.image }}" alt="{{ page.title }}">
-</figure>
+<span class="device-photo">
+    <img src="../{{ page.image }}" alt="{{ page.title }}" />
+</span>
 {% endif %}
 
 {% if page.tags %}
@@ -36,3 +36,8 @@ layout: default
 </table>
 
 <div class="device-content">{{ content }}</div>
+
+{% if page.links %}
+<h2>Links</h2>
+{{ page.links | markdownify }}
+{% endif %}

@@ -26,3 +26,9 @@ spec-weight: 680g
 spec-ports: 2x USB 2.0, Headphone jack, DC-in <br>
     Proprietary display/LAN
 ---
+
+## Notes
+
+- Original battery seems to have a "stupid" BMS, it always reports 97% health, even after many cycles of the degraded battery. <br>
+  Percentage drops quickly and non-linearly when over 50%, hints towards a voltage based SoC calculation. <br>
+  I'm waiting for new battery cells to arrive to repair this battery.
