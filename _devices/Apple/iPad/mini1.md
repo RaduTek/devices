@@ -3,6 +3,7 @@ layout: device
 title: iPad mini (1st generation)
 image: images/mini1.jpg
 manufacturer: Apple
+model: A1432
 brand: iPad
 type: Tablet
 tags: mobile-device tablet
