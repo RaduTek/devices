@@ -6,14 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </head>
 
 <body>
-    <div class="content">
-        <div class="header">
+    <div id="header">
+        <div id="header-inner">
             <h1><a href="{{ '/' | relative_url }}" class="title-link" title="Go home">{{ site.title }}</a></h1>
         </div>
-        {{ content }}
+    </div>
+    <div id="content">
+        <div id="content-shadow">
+            <div id="content-inner">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer-inner">
+            <p>&copy; {{ site.time | date: "%Y" }} <a href="http://radutek.uk">RaduTek</a></p>
+        </div>
     </div>
 </body>
 
