@@ -30,8 +30,12 @@
   label: Wireless WAN
 - key: spec-bt
   label: Bluetooth
+- key: spec-modem
+  label: Modem
 - key: spec-sensor
   label: Sensor
+- key: spec-fp
+  label: Fingerprint Reader
 - key: spec-camera
   label: Camera
 - key: spec-audio
@@ -56,3 +60,5 @@
   label: Operating System
 - key: spec-firmware
   label: Firmware
+- key: features
+  label: Other Features
