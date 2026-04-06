@@ -27,7 +27,7 @@ layout: default
         <tr>
             <th class="row-head">{{ row.label }}</th>
             <td>
-                {{ value | markdownify }}
+                {% if value == true %}Yes{% elsif value == false %}No{% else %}{{ value | markdownify }}{% endif %}
             </td>
         </tr>
         {% endif %}
