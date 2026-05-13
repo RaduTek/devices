@@ -3,7 +3,7 @@ layout: device
 title: iPod nano (2nd Gen)
 image: images/nano-2nd.jpg
 manufacturer: Apple
-brand: iPod
+brand: iPod nano
 type: Media Player
 tags: media-player
 spec-color: Silver

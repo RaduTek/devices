@@ -3,7 +3,7 @@ layout: device
 title: Galaxy Tab S8+
 image: images/TabS8plus.jpg
 manufacturer: Samsung
-brand: Galaxy
+brand: Galaxy Tab
 type: Tablet
 tags: mobile-device tablet android
 spec-os: Android
