@@ -15,7 +15,7 @@ spec-cpu: |
 spec-ram: 1 GB DDR3
 spec-storage: 320 GB HDD
 spec-display: 10" 1024x600 TN LED
-spec-wifi: 802.11n
+spec-wlan: 802.11n
 ---
 
 ## Notes
