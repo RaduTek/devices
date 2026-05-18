@@ -7,6 +7,7 @@ brand: iPod
 type: Media Player
 tags: media-player
 model: MB565
+release-date: 2008
 spec-display: 2.5" 320x240 LED LCD
 spec-storage: 128 GB M.2 SATA SSD
 spec-battery: 2000 mAh

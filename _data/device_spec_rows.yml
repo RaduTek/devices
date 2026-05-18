@@ -32,6 +32,8 @@
   label: Bluetooth
 - key: spec-modem
   label: Modem
+- key: spec-radio
+  label: Radio
 - key: spec-sensor
   label: Sensor
 - key: spec-fp

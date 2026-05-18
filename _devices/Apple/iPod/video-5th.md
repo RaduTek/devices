@@ -6,6 +6,7 @@ manufacturer: Apple
 brand: iPod
 type: Media Player
 tags: media-player
+release-date: 2005
 spec-color: White
 spec-display: 2.5" 320x240 LED LCD
 spec-storage: 30 GB 1.8" 4200 RPM PATA HDD
