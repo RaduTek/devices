@@ -7,6 +7,7 @@ brand: iPod
 type: Media Player
 tags: media-player
 model: MB147
+release-date: 2007
 spec-display: 2.5" 320x240 LED LCD
 spec-storage: 80 GB 1.8" PATA HDD
 spec-color: Black

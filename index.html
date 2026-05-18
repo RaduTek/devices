@@ -29,10 +29,10 @@ title: Devices
 
 {% if unbranded.size > 0 %}
 {% assign unbranded_with_model = unbranded | where_exp: "device", "device.model != nil" | where_exp: "device",
-"device.model != ''" | sort_natural: "model" %}
-{% assign unbranded_without_model_nil = unbranded | where_exp: "device", "device.model == nil" | sort_natural: "title"
+"device.model != ''" | sort_natural: "model" | sort: "release-date" %}
+{% assign unbranded_without_model_nil = unbranded | where_exp: "device", "device.model == nil" | sort_natural: "title" | sort: "release-date"
 %}
-{% assign unbranded_without_model_empty = unbranded | where_exp: "device", "device.model == ''" | sort_natural: "title"
+{% assign unbranded_without_model_empty = unbranded | where_exp: "device", "device.model == ''" | sort_natural: "title" | sort: "release-date"
 %}
 {% assign unbranded_without_model = unbranded_without_model_nil | concat: unbranded_without_model_empty %}
 {% assign unbranded_sorted = unbranded_with_model | concat: unbranded_without_model %}
@@ -60,9 +60,9 @@ title: Devices
 {% for brand in brands %}
 {% assign brand_count = brand.items | size %}
 {% assign brand_with_model = brand.items | where_exp: "device", "device.model != nil" | where_exp: "device",
-"device.model != ''" | sort_natural: "model" %}
-{% assign brand_without_model_nil = brand.items | where_exp: "device", "device.model == nil" | sort_natural: "title" %}
-{% assign brand_without_model_empty = brand.items | where_exp: "device", "device.model == ''" | sort_natural: "title" %}
+"device.model != ''" | sort_natural: "model" | sort: "release-date" %}
+{% assign brand_without_model_nil = brand.items | where_exp: "device", "device.model == nil" | sort_natural: "title" | sort: "release-date" %}
+{% assign brand_without_model_empty = brand.items | where_exp: "device", "device.model == ''" | sort_natural: "title" | sort: "release-date" %}
 {% assign brand_without_model = brand_without_model_nil | concat: brand_without_model_empty %}
 {% assign brand_sorted = brand_with_model | concat: brand_without_model %}
 <h3>{{ brand.name }} ({{ brand_count }})</h3>

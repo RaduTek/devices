@@ -14,3 +14,5 @@ spec-storage: 16 GB
 spec-ram: 512 MB
 spec-wwan: 3G
 ---
+
+This is the first tablet running Android made by Samsung.

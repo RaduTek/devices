@@ -25,10 +25,8 @@ spec-dimensions: 24.5 x 2 x 12 cm
 spec-weight: 680g
 spec-ports: 2x USB 2.0, Headphone jack, DC-in <br>
     Proprietary display/LAN
+links: |
+  - [Recovery Partition](https://archive.org/details/vgn-p-31-zk-recovery-french) extracted from my unit (Windows 7 Home Premium in French)
+  - [Drivers & Software](https://archive.org/details/VGN-P31ZK-Drivers-Software) compiled by me, with some software extracted from the recovery image <br/>
+    Contains the proper versions of wireless utilities to enable GPS usage on European units with Option 3G WWAN modem.
 ---
-
-## Notes
-
-- Original battery seems to have a "stupid" BMS, it always reports 97% health, even after many cycles of the degraded battery. <br>
-  Percentage drops quickly and non-linearly when over 50%, hints towards a voltage based SoC calculation. <br>
-  I'm waiting for new battery cells to arrive to repair this battery.
