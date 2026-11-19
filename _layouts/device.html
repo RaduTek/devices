@@ -1,6 +1,9 @@
 ---
-layout: default
+layout: sidebar
 ---
+
+<main>
+<section>
 
 <h1><a href="{{ page.url | absolute_url }}" class="title-link" title="Permalink">{{ page.title }}</a></h1>
 
@@ -41,3 +44,7 @@ layout: default
 <h2>Links</h2>
 {{ page.links | markdownify }}
 {% endif %}
+
+
+</section>
+</main>

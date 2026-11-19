@@ -1,7 +1,11 @@
 ---
-layout: default
+layout: sidebar
 title: Devices
 ---
+
+<main>
+
+<section>
 
 <p>Welcome to my device collection! This website shows off all the devices I own (as long as I keep it updated :)</p>
 
@@ -11,6 +15,11 @@ title: Devices
 
 <p>Click on any device to view more information about it.</p>
 
+</section>
+
+<section>
+    
+
 {% assign total_device_count = site.devices | size %}
 <h1>Devices ({{ total_device_count }})</h1>
 
@@ -19,7 +28,7 @@ title: Devices
 {% for manufacturer in devices_by_manufacturer %}
 {% assign manufacturer_device_count = manufacturer.items | size %}
 
-<h2>{{ manufacturer.name }} ({{ manufacturer_device_count }})</h2>
+<h2 id="{{ manufacturer.name | slugify }}">{{ manufacturer.name }} ({{ manufacturer_device_count }})</h2>
 
 {% assign branded = manufacturer.items | where_exp: "device", "device.brand != nil" | where_exp: "device", "device.brand
 != ''" %}
@@ -38,7 +47,7 @@ title: Devices
 {% assign unbranded_sorted = unbranded_with_model | concat: unbranded_without_model %}
 <div class="device-grid">
     {% for device in unbranded_sorted %}
-    <div class="device-grid-cell">
+    <div class="device-grid-cell card">
         {% if device.thumbnail or device.image %}
         <div class="device-grid-image">
             <a href="{{ device.url | relative_url }}">
@@ -68,7 +77,7 @@ title: Devices
 <h3>{{ brand.name }} ({{ brand_count }})</h3>
 <div class="device-grid">
     {% for device in brand_sorted %}
-    <div class="device-grid-cell">
+    <div class="device-grid-cell card">
         {% if device.thumbnail or device.image %}
         <div class="device-grid-image">
             <a href="{{ device.url | relative_url }}">
@@ -87,3 +96,8 @@ title: Devices
 {% endif %}
 
 {% endfor %}
+
+
+</section>
+
+</main>

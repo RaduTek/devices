@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="side side-left">
+    <section>
+        <h1>Manufacturers</h1>
+        <ul>
+            {% assign manufacturers = site.devices | sort_natural: "manufacturer" | group_by: "manufacturer" %}
+            {% for manufacturer in manufacturers %}
+            {% assign manufacturer_device_count = manufacturer.items | size %}
+            <li><a href="#{{ manufacturer.name | slugify }}">{{ manufacturer.name }} ({{ manufacturer_device_count }})</a></li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>
+
+{{ content }}

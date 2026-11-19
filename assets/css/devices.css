@@ -1,0 +1,133 @@
+img {
+    border: none;
+    outline: none;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* table,
+tr,
+td {
+    border-collapse: collapse;
+}
+
+table.border,
+table.border tr,
+table.border td,
+table.border th {
+    border: 1px solid #ccc;
+}
+
+table td,
+table th {
+    padding: 1px 4px;
+}
+
+table tr th {
+    background-color: #eee;
+}
+table tr th.row-head {
+    text-align: left;
+} */
+
+table td p {
+    margin: 0 !important;
+}
+
+table ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 16px;
+}
+
+table li {
+    margin: 0;
+}
+
+.device-grid {
+    overflow: hidden;
+    margin: -4px -4px 12px -4px;
+    padding: 4px;
+}
+
+.device-grid-cell {
+    float: left;
+    width: 200px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    overflow: hidden;
+}
+
+.device-grid-cell p {
+    margin: 0;
+}
+
+.device-grid-cell h4 {
+    margin: 0 0 6px 0;
+}
+
+.device-grid-meta {
+    font-size: 13px;
+    /* color: #222; */
+}
+
+.device-grid-image a {
+    display: block;
+    text-align: center;
+}
+
+.device-grid-image img {
+    margin: 0 auto;
+    height: 120px;
+    width: auto;
+    max-width: 100%;
+}
+
+.device-specs {
+    margin-bottom: 14px;
+    min-width: 400px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.device-photo {
+    float: right;
+    margin: 0;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: white;
+    padding: 2px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.device-photo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+@media screen and (max-width: 600px) {
+    .device-photo {
+        float: none;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .device-specs {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .device-grid-cell {
+        width: 100%;
+        float: none;
+        display: block;
+        box-sizing: border-box;
+    }
+}
